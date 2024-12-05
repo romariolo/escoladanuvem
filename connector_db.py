@@ -1,5 +1,5 @@
 import mysql.connector
-from mysql.connector import error
+from mysql.connector import Error
 from dotenv import load_dotenv
 import os
 
@@ -14,7 +14,7 @@ db_config = {
 
 }
 
-try
+try:
     
     connection = mysql.connector.connect(**db_config)
     if connection.is_connected():
